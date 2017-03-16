@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+<h1>Hello!</h1>
+  <h2>chose a date from the dropdown </h2>
+
+    <form name="dropdown" action="" method="POST", class="choice">
+    <select name="option" width="300px">
+    {% for t in tuples %}
+        <option value="{{t}}">{{t}}</option>
+    {% endfor %}
+    </select>
+    <input class="button1" type="submit" value="Select">
+
+<table>
+<tbody>
+{% for line in q %}
+   <tr>
+        <td>{{line[0]}}</td>
+        <td>{{line[1]}}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}
